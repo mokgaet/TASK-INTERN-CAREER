@@ -105,7 +105,7 @@ public class Calculator implements ActionListener{
         frame.add(clearButton);
         frame.add(textField);  // add the textfield to the frame
 
-        frame.setVisible(true);
+        frame.setVisible(true); // show out the frame
 
     }
     @Override
@@ -184,7 +184,7 @@ public class Calculator implements ActionListener{
 
 
     public static void main(String[] args){
-        Calculator cal = new Calculator();
+        Calculator cal = new Calculator(); // create the calculator object
     }
 
 
