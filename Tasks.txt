@@ -1,12 +1,12 @@
 Task A: Java Application Development
-      1. Straightforward application idea - i choose a calculate
+      1. Straightforward application idea -  a simple calculate application
       2. Clear defined functionality and features 
-      3. Use JavaFX to implement the User Interface
+      3. Use Swing to implement the User Interface
       4. Document an overview of the application ( how to run it and any special instructions)
 
 
 Task B:Online Examination Systems in Java
-      1. User Registration amd Roles
+      1.User Registration and Roles
       2.Exam Management
       3. Auto Grading
       4. Security and Data Storage
