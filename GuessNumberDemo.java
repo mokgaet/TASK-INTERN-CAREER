@@ -1,4 +1,4 @@
-// Owner: Mmakola Mokgaetsi
+//Author : Mmakola Mokgaetsi
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -7,8 +7,9 @@ import java.util.Random;
 
 public class GuessNumberDemo extends JFrame {
 
-    private int targetNumber;
+    private static int targetNumber;
     private int attempts;
+
     // UI Components
     private JTextField guessInput;
     private JLabel feedbackLabel;
@@ -66,13 +67,12 @@ public class GuessNumberDemo extends JFrame {
             if (attempts > 5){
                 feedbackLabel.setText("You've reached your attempts for this round, Reset the game!");
             }
-
             if (guess < targetNumber) {
-                feedbackLabel.setText("Too low! Try again.");
+                feedbackLabel.setText("The number guessed is low! Try again.");
             } else if (guess > targetNumber && guess <=10) {
-                feedbackLabel.setText("Too high! Try again.");
+                feedbackLabel.setText("The number guessed is high! Try again.");
             } else if (guess > 10 ) {
-                feedbackLabel.setText("Guess out of bound! ");
+                feedbackLabel.setText("Guess out of bound! - RANGE IS BETWEEN 1 & 10 !");
 
             } else {
                     feedbackLabel.setText("Correct! You guessed it in " + attempts + " attempts.");
@@ -83,19 +83,25 @@ public class GuessNumberDemo extends JFrame {
             feedbackLabel.setText("Please enter a valid number.");
         }
     }
+    //Method to generate a random number between 1 and 10
+    public static int generateRandomNumber(int min, int max) {
+        Random random = new Random();
+        return random.nextInt(max - min + 1) + min;
+    }
+
 /*
  resetGame() -- initializes the target number and attempts, and resets the UI components.
  */
     private void resetGame() {
-        targetNumber = new Random().nextInt(10) + 1;
+        targetNumber = generateRandomNumber(1,10); // generates a number between min (inclusive) and max (exclusive)
         attempts = 0;
         guessInput.setText(" ");
-        feedbackLabel.setText("Guess a number between 1 and 100");
+        feedbackLabel.setText("Guess a number between 1 and 10");
         guessButton.setEnabled(true);
     }
 
-     public static void main(String[] args) {
+    public static void main(String[] args) {
         GuessNumberDemo demo = new GuessNumberDemo(); // direct instantiation instead of using SwingUtilities.invokeLater
-        //SwingUtilities.invokeLater(GuessNumberDemo::new);
+        //System.out.println("The Secret Number :" + targetNumber);
     }
 }
