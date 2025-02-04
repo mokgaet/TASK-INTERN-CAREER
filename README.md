@@ -9,6 +9,13 @@ Compile and run the program.
 4. Mind you, you have 5 attempts to guess the number.
 
 # The Calculator Application
+The Calculator Application is a simple and user-friendly tool for performing basic arithmetic operations. It allows users to quickly perform calculations such as addition, subtraction, multiplication, and division.  
 
-> The Calculator Application is a simple and user-friendly tool for performing basic arithmetic operations. 
-It allows users to quickly perform calculations such as addition, subtraction, multiplication, and division.
+## Features  
+- A graphical user interface (GUI) for easy interaction.  
+- Supports basic operations: **Addition (+), Subtraction (-), Multiplication (*), and Division (/).**  
+- Displays real-time results as users input numbers and operators.  
+- A **clear/reset** button to start a new calculation.  
+- Error handling for invalid inputs, such as division by zero.  
+
+This application is ideal for quick calculations and serves as a useful utility for users of all levels.  
